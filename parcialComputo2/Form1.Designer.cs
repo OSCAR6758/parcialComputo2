@@ -46,7 +46,6 @@
             this.txtConfirmarClave = new System.Windows.Forms.TextBox();
             this.lblConfirmarClave = new System.Windows.Forms.Label();
             this.gprIngresarDatos = new System.Windows.Forms.GroupBox();
-            this.btnVerClave = new System.Windows.Forms.Button();
             this.grpNavegacion = new System.Windows.Forms.GroupBox();
             this.lblIndicador = new System.Windows.Forms.Label();
             this.btnUltimo = new System.Windows.Forms.Button();
@@ -116,6 +115,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(259, 23);
             this.txtUsuario.TabIndex = 6;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtClave
             // 
@@ -123,6 +123,7 @@
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(259, 23);
             this.txtClave.TabIndex = 7;
+            this.txtClave.TextChanged += new System.EventHandler(this.txtClave_TextChanged);
             // 
             // txtDireccion
             // 
@@ -218,7 +219,6 @@
             // 
             // gprIngresarDatos
             // 
-            this.gprIngresarDatos.Controls.Add(this.btnVerClave);
             this.gprIngresarDatos.Controls.Add(this.txtClave);
             this.gprIngresarDatos.Controls.Add(this.txtConfirmarClave);
             this.gprIngresarDatos.Controls.Add(this.lblUsuario);
@@ -239,17 +239,6 @@
             this.gprIngresarDatos.TabStop = false;
             this.gprIngresarDatos.Text = "Ingresar Datos ";
             this.gprIngresarDatos.Enter += new System.EventHandler(this.grpRegistro_Enter);
-            // 
-            // btnVerClave
-            // 
-            this.btnVerClave.BackgroundImage = global::parcialComputo2.Properties.Resources._65172_jpg;
-            this.btnVerClave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerClave.Location = new System.Drawing.Point(399, 76);
-            this.btnVerClave.Name = "btnVerClave";
-            this.btnVerClave.Size = new System.Drawing.Size(20, 20);
-            this.btnVerClave.TabIndex = 18;
-            this.btnVerClave.UseVisualStyleBackColor = true;
-            this.btnVerClave.Click += new System.EventHandler(this.btnVerClave_Click);
             // 
             // grpNavegacion
             // 
@@ -368,7 +357,6 @@
         private System.Windows.Forms.GroupBox gprEdicion;
         private System.Windows.Forms.DataGridView dgvRegistros;
         private System.Windows.Forms.Label lblIndicador;
-        private System.Windows.Forms.Button btnVerClave;
     }
 }
 

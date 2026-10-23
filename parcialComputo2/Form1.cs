@@ -120,8 +120,7 @@ namespace parcialComputo2
                 btnAgregar.Text = "Nuevo";
             }
 
-            txtClave.UseSystemPasswordChar = true;
-            txtConfirmarClave.UseSystemPasswordChar = true;
+      
 
             CargarDatos();
         }
@@ -363,22 +362,18 @@ namespace parcialComputo2
 
         }
 
-        private void btnVerClave_Click(object sender, EventArgs e)
+    
+        private void grpRegistro_Enter(object sender, EventArgs e)
         {
-            
-            if (txtClave.UseSystemPasswordChar)
-            {
-                txtClave.UseSystemPasswordChar = false;
-                txtConfirmarClave.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtClave.UseSystemPasswordChar = true;
-                txtConfirmarClave.UseSystemPasswordChar = true;
-            }
+
         }
 
-        private void grpRegistro_Enter(object sender, EventArgs e)
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClave_TextChanged(object sender, EventArgs e)
         {
 
         }
