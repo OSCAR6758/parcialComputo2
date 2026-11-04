@@ -130,9 +130,15 @@ namespace parcialComputo2
             try
             {
                 ds = Conexion_base_datos.crearDs();
-                if (ds != null && ds.Tables["usuarios"].Rows.Count > 0)
+
+                
+                if (ds != null && ds.Tables.Contains("usuarios"))
                 {
                     dgvRegistros.DataSource = ds.Tables["usuarios"];
+                }
+
+                if (ds != null && ds.Tables["usuarios"].Rows.Count > 0)
+                {
                     if (posicion >= ds.Tables["usuarios"].Rows.Count)
                     {
                         posicion = ds.Tables["usuarios"].Rows.Count - 1;
@@ -141,7 +147,7 @@ namespace parcialComputo2
                 }
                 else
                 {
-
+    
                     txtUsuario.Clear();
                     txtClave.Clear();
                     txtConfirmarClave.Clear();
